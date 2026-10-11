@@ -1,0 +1,583 @@
+/* FLOWPAY
+   Beginner-friendly CSS: each section styles one part of the page.
+   You can change these simple colour names and sizes as you practise. */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f8f5;
+    color: #202923;
+    line-height: 1.6;
+}
+
+/* The top navigation */
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 20px 8%;
+    background-color: white;
+}
+
+.logo {
+    color: #202923;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: seagreen;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+nav a,
+.text-link,
+footer a {
+    color: #536158;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover,
+.text-link:hover,
+footer a:hover {
+    color: seagreen;
+}
+
+/* Reusable button styles */
+.button {
+    display: inline-block;
+    border: 0;
+    border-radius: 30px;
+    padding: 12px 21px;
+    font: inherit;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-dark {
+    background-color: #202923;
+    color: white;
+}
+
+.button-dark:hover {
+    background-color: #3b4a40;
+}
+
+.button-green {
+    background-color: seagreen;
+    color: white;
+}
+
+.button-green:hover {
+    background-color: darkgreen;
+}
+
+/* Main welcome area */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 90px 8%;
+}
+
+.hero-text {
+    max-width: 560px;
+    animation: appear 0.7s ease both;
+}
+
+.small-title {
+    margin: 0 0 12px;
+    color: seagreen;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin: 10px 0 18px;
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+}
+
+.hero-description,
+.section-intro {
+    max-width: 570px;
+    color: #667168;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.small-note,
+.form-note {
+    color: #7a857d;
+    font-size: 12px;
+}
+
+/* The balance card */
+.balance-card {
+    width: 100%;
+    max-width: 390px;
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #202923, #35483b);
+    color: white;
+    box-shadow: 0 18px 40px rgba(32, 41, 35, 0.16);
+    animation: float-in 0.8s ease both;
+}
+
+.balance-top,
+.card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card-label {
+    margin: 0;
+    color: #cbd6ce;
+    font-size: 13px;
+}
+
+.balance-card h2 {
+    margin: 8px 0;
+    font-size: clamp(28px, 4vw, 38px);
+    letter-spacing: -1px;
+}
+
+.card-symbol {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border: 1px solid #7f9385;
+    border-radius: 14px;
+    color: white;
+    font-size: 24px;
+}
+
+.balance-change {
+    margin: 12px 0 24px;
+    color: #9ee3b0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.balance-change span {
+    color: #cbd6ce;
+    font-weight: normal;
+}
+
+.card-line {
+    height: 1px;
+    background-color: #58675d;
+}
+
+.card-bottom {
+    margin-top: 20px;
+}
+
+.account-name {
+    margin: 4px 0 0;
+    font-weight: bold;
+}
+
+.demo-label {
+    color: #cbd6ce;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+/* Features and activity sections */
+.section {
+    padding: 75px 8%;
+}
+
+.features-section {
+    background-color: white;
+}
+
+.section-heading {
+    margin: 0;
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.section-intro {
+    margin-top: 12px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.feature-card {
+    padding: 27px;
+    border: 1px solid #e3e9e3;
+    border-radius: 18px;
+    background-color: #fbfcfa;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: appear 0.7s ease both;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(32, 41, 35, 0.08);
+}
+
+.feature-icon,
+.transaction-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border-radius: 13px;
+    background-color: #e4f3e8;
+    color: seagreen;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    margin: 18px 0 8px;
+    font-size: 19px;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #667168;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.activity-section {
+    background-color: #f6f8f5;
+}
+
+.section-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.activity-badge {
+    padding: 7px 13px;
+    border-radius: 20px;
+    background-color: #e4f3e8;
+    color: seagreen;
+    font-size: 13px;
+}
+
+.transaction-list {
+    max-width: 800px;
+    margin-top: 25px;
+    padding: 5px 24px;
+    border: 1px solid #e3e9e3;
+    border-radius: 18px;
+    background-color: white;
+}
+
+.transaction,
+.transaction-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.transaction {
+    padding: 18px 0;
+    border-bottom: 1px solid #edf0ec;
+}
+
+.transaction:last-child {
+    border-bottom: 0;
+}
+
+.transaction-left {
+    justify-content: flex-start;
+}
+
+.transaction h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.transaction p {
+    margin: 3px 0 0;
+    color: #7a857d;
+    font-size: 12px;
+}
+
+.expense {
+    color: #354039;
+    white-space: nowrap;
+}
+
+.income {
+    color: seagreen;
+    white-space: nowrap;
+}
+
+.income-icon {
+    background-color: #e4f3e8;
+}
+
+/* The practice form */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 50px;
+    background-color: white;
+}
+
+.contact-copy {
+    max-width: 450px;
+}
+
+.contact-form {
+    display: grid;
+    gap: 10px;
+    padding: 25px;
+    border: 1px solid #e3e9e3;
+    border-radius: 18px;
+    background-color: #fbfcfa;
+}
+
+.contact-form label {
+    margin-top: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d5ddd5;
+    border-radius: 10px;
+    background-color: white;
+    color: #202923;
+    font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form select:focus {
+    outline: 2px solid #8bc99a;
+    border-color: seagreen;
+}
+
+.form-button {
+    margin-top: 12px;
+}
+
+.form-note {
+    margin: 0;
+}
+
+/* The bottom of the page */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 8%;
+    background-color: #202923;
+    color: white;
+}
+
+.footer-logo {
+    color: white;
+}
+
+footer p {
+    color: #cbd6ce;
+    font-size: 13px;
+}
+
+footer a {
+    color: #e0e9e2;
+}
+
+/* Small animations */
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVENESS: these rules apply on smaller screens */
+@media (max-width: 850px) {
+    .site-header {
+        flex-wrap: wrap;
+        padding: 18px 5%;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    .hero {
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-section {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        gap: 14px;
+    }
+
+    .header-button {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    nav {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 50px 6%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .balance-card {
+        max-width: none;
+        padding: 25px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .transaction-list {
+        padding: 5px 15px;
+    }
+
+    .transaction {
+        gap: 10px;
+    }
+
+    .transaction-left {
+        gap: 10px;
+    }
+
+    .transaction-icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Respect visitors who prefer less movement on their device. */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
